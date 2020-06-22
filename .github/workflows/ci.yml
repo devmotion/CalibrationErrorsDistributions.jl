@@ -1,7 +1,15 @@
 name: CI
+
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      # This is where pull requests from "bors r+" are built.
+      - staging
+      # This is where pull requests from "bors try" are built.
+      - trying
+      # Build master branch.
+      - master
+
 jobs:
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }}

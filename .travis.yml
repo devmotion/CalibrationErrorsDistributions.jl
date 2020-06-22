@@ -1,7 +1,13 @@
 # Documentation: http://docs.travis-ci.com/user/languages/julia
 language: julia
-notifications:
-  email: false
+branches:
+  only:
+    # This is where pull requests from "bors r+" are built.
+    - staging
+    # This is where pull requests from "bors try" are built.
+    - trying
+    # Build master branch.
+    - master
 julia:
   - 1.1
   - 1
@@ -16,6 +22,8 @@ jobs:
   fast_finish: true
   allow_failures:
     - julia: nightly
+notifications:
+  email: false
 after_success:
   - if [[ $TRAVIS_JULIA_VERSION = 1 ]] && [[ $TRAVIS_OS_NAME = linux ]]; then
       julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())';
