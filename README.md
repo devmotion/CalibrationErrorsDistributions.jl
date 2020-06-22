@@ -1,4 +1,7 @@
-# CalibrationErrorsDistributions
+# CalibrationErrorsDistributions.jl
+
+Estimation of calibration errors for models that output probability distributions from
+[Distributions.jl](https://github.com/JuliaStats/Distributions.jl).
 
 [![Build Status](https://github.com/devmotion/CalibrationErrorsDistributions.jl/workflows/CI/badge.svg)](https://github.com/devmotion/CalibrationErrorsDistributions.jl/actions)
 [![Build Status](https://travis-ci.com/devmotion/CalibrationErrorsDistributions.jl.svg?branch=master)](https://travis-ci.com/devmotion/CalibrationErrorsDistributions.jl)
