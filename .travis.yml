@@ -15,6 +15,9 @@ julia:
 os:
   - linux
   - osx
+env:
+  global:
+    - PYTHON=Conda
 cache:
   directories:
     - ~/.julia/artifacts
