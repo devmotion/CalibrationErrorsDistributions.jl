@@ -48,4 +48,6 @@ jobs:
             ${{ runner.os }}-test-
             ${{ runner.os }}-
       - uses: julia-actions/julia-buildpkg@latest
+        env:
+          PYTHON: python
       - uses: julia-actions/julia-runtest@latest
