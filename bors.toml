@@ -11,6 +11,7 @@ status = [
   "Julia 1.% - macOS-latest - x64",
 ]
 delete_merged_branches = true
+use_squash_merge = true
 # Uncomment this to use a two hour timeout.
 # The default is one hour.
 #timeout_sec = 7200
