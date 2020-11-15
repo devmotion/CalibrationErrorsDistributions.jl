@@ -29,6 +29,8 @@ jobs:
           - x64
           - x86
         exclude:
+          - os: ubuntu-latest
+            arch: x86
           - os: macOS-latest
             arch: x86
     steps:
