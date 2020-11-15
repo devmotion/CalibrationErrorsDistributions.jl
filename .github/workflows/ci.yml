@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: '3.x'
           architecture: ${{ matrix.arch }}
-      - run: python -m pip install pot
+      - run: python -m pip install cython pot
       - uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.version }}
