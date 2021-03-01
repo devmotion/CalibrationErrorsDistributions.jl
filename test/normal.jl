@@ -43,7 +43,7 @@ using Test
         
         @test any(x -> x > zero(x), estimates)
         @test any(x -> x < zero(x), estimates)
-        @test mean(estimates) ≈ 0 atol=1e-5
+        @test mean(estimates) ≈ 0 atol=1e-4
     end
 
     @testset "UCME: basic example" begin

@@ -23,7 +23,7 @@ using Test
 
         # create test locations
         testpredictions_μ = randn(ntestsamples)
-        testpredictions_σ = rand(nsamples)
+        testpredictions_σ = rand(ntestsamples)
         testpredictions_normal = map(Normal, testpredictions_μ, testpredictions_σ)
         testpredictions_mvnormal = map(testpredictions_μ, testpredictions_σ) do μ, σ
             MvNormal([μ], σ)
