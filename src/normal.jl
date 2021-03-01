@@ -15,9 +15,12 @@ function CalibrationErrors.unsafe_skce_eval_targets(
     σ̃ = p̃.σ
 
     # compute scaling factors
-    α = inv(hypot(1, σ))
-    β = inv(hypot(1, σ̃))
-    γ = inv(hypot(1, σ, σ̃))
+    # TODO: use `hypot`?
+    sqσ = σ^2
+    sqσ̃ = σ̃^2
+    α = inv(sqrt(1 + sqσ))
+    β = inv(sqrt(1 + sqσ̃))
+    γ = inv(sqrt(1 + sqσ + sqσ̃))
 
     return kernel(y, ỹ) - α * kernel(α * μ, α * ỹ) - β * kernel(β * y, β * μ̃) + γ * kernel(γ * μ, γ * μ̃)
 end
@@ -32,7 +35,8 @@ function CalibrationErrors.unsafe_ucme_eval_targets(
     testy::Real
 )
     # compute scaling factor
-    α = inv(hypot(1, p.σ))
+    # TODO: use `hypot`?
+    α = inv(sqrt(1 + p.σ^2))
 
     return kernel(y, testy) - α * kernel(α * p.μ, α * testy)
 end
