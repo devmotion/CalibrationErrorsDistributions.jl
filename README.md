@@ -7,6 +7,7 @@ Estimation of calibration errors for models that output probability distribution
 [![DOI](https://zenodo.org/badge/274106426.svg)](https://zenodo.org/badge/latestdoi/274106426)
 [![Coverage](https://codecov.io/gh/devmotion/CalibrationErrorsDistributions.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/devmotion/CalibrationErrorsDistributions.jl)
 [![Coverage](https://coveralls.io/repos/github/devmotion/CalibrationErrorsDistributions.jl/badge.svg?branch=master)](https://coveralls.io/github/devmotion/CalibrationErrorsDistributions.jl?branch=master)
+[![Code Style: Blue](https://img.shields.io/badge/code%20style-blue-4495d1.svg)](https://github.com/invenia/BlueStyle)
 [![Bors enabled](https://bors.tech/images/badge_small.svg)](https://app.bors.tech/repositories/24611)
 
 ## Related packages
@@ -26,5 +27,9 @@ If you use CalibrationsErrorsDistributions.jl as part of your research, teaching
 please consider citing the following publication:
 
 Widmann, D., Lindsten, F., & Zachariah, D. (2019).
+[Calibration tests beyond classification](https://openreview.net/forum?id=-bxf89v3Nx).
+To be presented at *ICLR 2021*.
+
+Widmann, D., Lindsten, F., & Zachariah, D. (2021).
 [Calibration tests beyond classification](https://openreview.net/forum?id=-bxf89v3Nx).
 To be presented at *ICLR 2021*.
