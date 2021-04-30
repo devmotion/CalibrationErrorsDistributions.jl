@@ -2,7 +2,6 @@ using CalibrationErrorsDistributions
 using Distances
 using LinearAlgebra
 using MathOptInterface
-using OptimalTransport
 using PDMats
 using Random
 using Test
@@ -15,6 +14,16 @@ using CalibrationErrorsDistributions:
     sqwasserstein,
     optimal_transport_map
 using Tulip: Tulip
+
+# only add OptimalTransport on >= Julia 1.4
+# Julia 1.3 is only supported by OptimalTransport 0.1 which requires Python
+@static if VERSION >= v"1.4"
+    using Pkg: Pkg
+    Pkg.add(;
+        name="OptimalTransport", uuid="7e02d93a-ae51-4f58-b602-d97af76e3b33", version="0.2"
+    )
+    using OptimalTransport
+end
 
 Random.seed!(1234)
 
