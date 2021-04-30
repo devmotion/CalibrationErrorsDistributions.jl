@@ -13,7 +13,7 @@
     P_ot = emd(μ, ν, C, Tulip.Optimizer())
     cost_ot = emd2(μ, ν, C, Tulip.Optimizer())
 
-    # compute optimal transport map and squared Wasserstein-2 distance
+    # compute optimal transport map and squared Wasserstein distance
     lp = Tulip.Optimizer()
     P = optimal_transport_map(μ, ν, C, lp)
     @test size(C) == size(P)
