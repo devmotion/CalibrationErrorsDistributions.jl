@@ -10,6 +10,8 @@ Estimation of calibration errors for models that output probability distribution
 [![Code Style: Blue](https://img.shields.io/badge/code%20style-blue-4495d1.svg)](https://github.com/invenia/BlueStyle)
 [![Bors enabled](https://bors.tech/images/badge_small.svg)](https://app.bors.tech/repositories/24611)
 
+[There is also a Python interface for this package](https://github.com/devmotion/pycalibration)
+
 ## Related packages
 
 This package extends calibration error estimation for classification models
@@ -20,6 +22,8 @@ distributions.
 
 [CalibrationTests.jl](https://github.com/devmotion/CalibrationTests.jl) implements
 statistical hypothesis tests of calibration.
+
+[pycalibration](https://github.com/devmotion/pycalibration) is a Python interface for CalibrationErrors.jl, CalibrationErrorsDistributions.jl, and CalibrationTests.jl.
 
 ## Reference
 
