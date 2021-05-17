@@ -6,6 +6,6 @@
 
     @testset "MixtureWassersteinExponentialKernel" begin
         kernel = @test_deprecated(MixtureWassersteinExponentialKernel())
-        @test kernel isa ExponentialKernel{MixtureWasserstein}
+        @test kernel isa ExponentialKernel{<:MixtureWasserstein}
     end
 end

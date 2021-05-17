@@ -1,4 +1,4 @@
-@deprecate WassersteinExponentialKernel ExponentialKernel(; metric=Wasserstein())
-@deprecate MixtureWassersteinExponentialKernel ExponentialKernel(;
+@deprecate WassersteinExponentialKernel() ExponentialKernel(; metric=Wasserstein())
+@deprecate MixtureWassersteinExponentialKernel() ExponentialKernel(;
     metric=MixtureWasserstein()
 )

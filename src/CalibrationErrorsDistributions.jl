@@ -6,7 +6,7 @@ using Reexport
 @reexport using Distributions
 @reexport using KernelFunctions
 
-using Distances: Distances
+using Distances: Distances, Euclidean, SqEuclidean
 using MathOptInterface: MathOptInterface
 using PDMats: PDMats
 using Tulip: Tulip
