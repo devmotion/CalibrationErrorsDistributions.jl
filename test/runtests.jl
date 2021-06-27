@@ -6,10 +6,7 @@ using Random
 using Test
 
 using CalibrationErrorsDistributions:
-    Wasserstein,
-    SqWasserstein,
-    MixtureWasserstein,
-    SqMixtureWasserstein
+    Wasserstein, SqWasserstein, MixtureWasserstein, SqMixtureWasserstein
 
 Random.seed!(1234)
 
