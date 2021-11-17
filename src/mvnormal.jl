@@ -104,11 +104,12 @@ scale_cov(Σ::PDMats.AbstractPDMat, v) = PDMats.X_A_Xt(Σ, LinearAlgebra.diagm(v
 
 invquad_diff(A::PDMats.ScalMat, x, y) = Distances.sqeuclidean(x, y) / A.value
 function invquad_diff(
-    A::PDMats.PDiagMat, x::AbstractVector{<:Real}, y::AbstractVector{<:Real},
+    A::PDMats.PDiagMat, x::AbstractVector{<:Real}, y::AbstractVector{<:Real}
 )
     n = length(x)
     length(y) == n || throw(DimensionMismatch("x and y must be of the same length"))
-    size(A) == (n, n) || throw(DimensionMismatch("size of A is not consistent with x and y"))
+    size(A) == (n, n) ||
+        throw(DimensionMismatch("size of A is not consistent with x and y"))
     return sum(abs2(xi - yi) / wi for (xi, yi, wi) in zip(x, y, A.diag))
 end
 invquad_diff(A::PDMats.AbstractPDMat, x, y) = PDMats.invquad(A, x .- y)
