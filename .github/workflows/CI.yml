@@ -7,7 +7,7 @@ on:
       - staging
       # This is where pull requests from "bors try" are built.
       - trying
-      # Build master branch.
+      # Build the default branch.
       - main
 
 jobs:
@@ -58,7 +58,7 @@ jobs:
           coverage: ${{ matrix.version == '1' && matrix.os == 'ubuntu-latest' }}
       - uses: julia-actions/julia-processcoverage@v1
         if: matrix.version == '1' && matrix.os == 'ubuntu-latest'
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v2
         if: matrix.version == '1' && matrix.os == 'ubuntu-latest'
         with:
           file: lcov.info
