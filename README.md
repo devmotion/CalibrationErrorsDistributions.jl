@@ -1,3 +1,8 @@
+# !! This package is archived !!
+
+All functionality has been integrated in [CalibrationErrors.jl](https://github.com/devmotion/CalibrationErrors.jl).
+Please install and use CalibrationErrors.jl instead.
+
 # CalibrationErrorsDistributions.jl
 
 Estimation of calibration errors for models that output probability distributions from
