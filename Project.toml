@@ -15,7 +15,7 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 Tulip = "6dd1b50a-3aae-11e9-10b5-ef983d2400fa"
 
 [compat]
-CalibrationErrors = "0.5"
+CalibrationErrors = "0.5, 0.6"
 Distances = "0.10.1"
 Distributions = "0.23, 0.24, 0.25"
 ExactOptimalTransport = "0.1, 0.2"
